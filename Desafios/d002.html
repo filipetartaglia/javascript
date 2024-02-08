@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincando com o DOM</title>
+</head>
+<body>
+    <h1>Calculadora básica</h1>
+    <h2>Somar:</h2>
+    <input type="number" name="som1" id="som1"> +
+    <input type="number" name="som2" id="som2">
+    <input type="button" value="somar" onclick="somar()">
+    <p id="ressoma">Aqui vai o resultado...</p>
+
+    <br>
+
+    <h2>Subtrair</h2>
+    <input type="number" name="sub1" id="sub1"> -
+    <input type="number" name="sub2" id="sub2">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <p id="ressub">Aqui vai o resultado...</p>
+
+    <br>
+    
+    <h2>Multiplicar:</h2>
+    <input type="number" name="mult1" id="mult1"> x
+    <input type="number" name="mult2" id="mult2">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <p id="resmult">Aqui vai o resultado...</p>
+
+    <br>
+
+    <h2>Dividir:</h2>
+    <input type="number" name="div1" id="div1"> /
+    <input type="number" name="div2" id="div2">
+    <input type="button" value="dividir" onclick="dividir()">
+    <p id="resdiv">Aqui vai o resultado...</p>
+</body>
+    <script> 
+         function somar() {
+            var nsoma1 = window.document.getElementById('som1')
+            var nsoma2 = window.document.getElementById('som2')
+            var ressoma = window.document.getElementById('ressoma')
+            var numsoma1 = Number(nsoma1.value)
+            var numsoma2 = Number(nsoma2.value)
+            var rsoma = numsoma1 + numsoma2
+            ressoma.innerHTML = `A soma entre ${numsoma1} e ${numsoma2} é igual a ${rsoma}`
+         }
+
+         function subtrair() {
+            var nsub1 = window.document.getElementById('sub1')
+            var nsub2 = window.document.getElementById('sub2')
+            var ressub = window.document.getElementById('ressub')
+            var numsub1 = Number(nsub1.value)
+            var numsub2 = Number(nsub2.value)
+            var rsub = numsub1 - numsub2
+            ressub.innerHTML = `A subtração entre ${numsub1} e ${numsub2} é igual a ${rsub}`
+         }
+
+         function multiplicar() {
+            var nmult1 = window.document.getElementById('mult1')
+            var nmult2 = window.document.getElementById('mult2')
+            var resmult = window.document.getElementById('resmult')
+            var nummult1 = Number(nmult1.value)
+            var nummult2 = Number(nmult2.value)
+            var rmult = nummult1 * nummult2
+            resmult.innerHTML = `A multiplicação entre ${nummult1} e ${nummult2} é igual a ${rmult}`
+         }
+
+         function dividir() {
+            var ndiv1 = window.document.getElementById('div1')
+            var ndiv2 = window.document.getElementById('div2')
+            var resdiv = window.document.getElementById('resdiv')
+            var numdiv1 = Number(ndiv1.value)
+            var numdiv2 = Number(ndiv2.value)
+            var rdiv = numdiv1 / numdiv2
+            resdiv.innerHTML = `A soma entre ${numdiv1} e ${numdiv2} é igual a ${rdiv}`
+         }
+    </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apenas brincando com o conhecimento de JS</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+        }
+        h1 {
+            font: normal 25pt arial;
+        }
+        p {
+            font: normal 13pt sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="t1">Brincadeira de Tartaglia!</h1>
+    <h2 class="titulo2">Filipe Tartaglia...</h2>
+    <p id="paragrafo">Filipe Tartaglia gosta de brincar com o JavaScript</p>
+</body>
+    <script>
+        /*
+        var titulo = window.document.getElementsByTagName('h1')[0]
+        document.write('Estou aprendendo JavaScript: ' + titulo.innerHTML)
+        */
+
+        
+        var titulo = document.getElementById('t1')
+        titulo.innerHTML = 'Eu amo Jesus'
+        
+
+        var subtitulo = window.document.querySelector('h2.titulo2')
+        subtitulo.innerHTML = 'Aprendi JavaScript'
+
+        var p = window.document.querySelector('p#paragrafo')
+        p.innerHTML = 'Obrigado meu Deus!'
+    </script>
+</html>
