@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+div#corpo {
+    background-color: #FFBA00;
+    border-radius: 5pt;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+}
