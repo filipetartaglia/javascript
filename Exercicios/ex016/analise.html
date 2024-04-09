@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>Aprendendo Mais</h2>
+        <h1>Curso de JavaScript</h1>
+    </header>
+    <br>
+
+    <h4>Análise de Crédito</h4>
+    <p>Veja o resultado da análise de perfil.</p>
+    <br>
+    <br>
+    <div>
+        
+        <script>
+
+            let nomeCliente = prompt('Insira seu nome e sobrenome:')
+            let idadeCliente = prompt('Insira sua idade:')
+            let profissaoCliente = prompt('Qual a sua profissão? OBS: Deixe em branco caso não possua a informação.')
+            let rendaCliente = prompt('Qual a sua renda atual? OBS: Escreva apenas com números, sem carecteres especiais.')
+
+            document.write(`Nome do(a) cliente: ${nomeCliente} <br>`)
+            document.write(`Idade atual: ${idadeCliente} <br>`)
+            document.write(`Profissão: ${profissaoCliente} <br>`)
+            
+            if (rendaCliente >= 3000 && idadeCliente >= 25) {
+                document.write(`PARABÉNS, SEU CRÉDITO ESTÁ APROVADO NO VALOR DE R$ 10.000,00.`)
+            } else {
+                document.write(`CRÉDITO NEGADO, TENTE NOVAMENTE EM OUTRO MOMENTO.`)
+            }
+
+        </script>
+
+    </div>
+
+    <br>
+    <a href="ex01.html" target="_self">Clique para voltar ao início</a>
+    <br><br><br>
+
+    <br>
+    <footer>
+        <h2>Filipe Tartaglia - desenvolvedor</h2>
+        <h3><a href="instagram.com/lipetartaglia_" id="link-footer">Instagram</a></h3>
+        <h3><a href="mailto:Filipetartaglia01@gmail.com" id="link-footer">E-mail</a></h3>
+    </footer>
+</body>
+</html>
