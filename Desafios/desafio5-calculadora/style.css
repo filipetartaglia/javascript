@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    border-collapse: collapse;
+    border-radius: 1pt;
+}
+
+td {
+    border: 1px solid gray;
+    padding: 25px;
+    background-color: blue;
+    color: yellow;
+    font-weight: bolder;
+    text-align: center;
+    cursor: default;
+}
+
+td:hover {
+    background-color: white;
+    color: black;
+}
+
+td#tela-calculos {
+    background-color: black;
+    color: white;
+    text-align: right;
+    cursor: auto;
+}
+
+td#botao-divisao {
+    background-color: yellow;
+    color: blue;
+}
+
+td#botao-multiplicacao {
+    background-color: yellow;
+    color: blue;
+}
+
+td#botao-subtracao {
+    background-color: yellow;
+    color: blue;
+}
+
+td#botao-soma {
+    background-color: yellow;
+    color: blue;
+}
+
+td#botao-igual {
+    background-color: yellow;
+    color: blue;
+}

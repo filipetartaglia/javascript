@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <section>
+        <table>
+            <tr>
+                <td colspan="4" id="tela-calculos"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="botao-clear" onclick="botaoClear()">C</td>
+                <td id="botao-porcentagem" onclick="botaoPorcentagem()">%</td>
+                <td id="botao-divisao" onclick="botaoDivisao()">/</td>
+            </tr>
+            <tr>
+                <td id="botao-7" onclick="botao7()">7</td>
+                <td id="botao-8" onclick="botao8()">8</td>
+                <td id="botao-9" onclick="botao9()">9</td>
+                <td id="botao-multiplicacao" onclick="botaoMultiplicacao()">X</td>
+            </tr>
+            <tr>
+                <td id="botao-4" onclick="botao4()">4</td>
+                <td id="botao-5" onclick="botao5()">5</td>
+                <td id="botao-6" onclick="botao6()">6</td>
+                <td id="botao-subtracao" onclick="botaoSubtracao()">-</td>
+            </tr>
+            <tr>
+                <td id="botao-1" onclick="botao1()">1</td>
+                <td id="botao-2" onclick="botao2()">2</td>
+                <td id="botao-3" onclick="botao3()">3</td>
+                <td id="botao-soma" onclick="botaoSoma()">+</td>
+            </tr>
+            <tr>
+                <td colspan="2" id="botao-0" onclick="botao0()">0</td>
+                <td id="botao-ponto" onclick="botaoPonto()">.</td>
+                <td id="botao-igual" onclick="botaoIgual()">=</td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
