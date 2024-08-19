@@ -14,7 +14,8 @@ while(x < 100) {
 
     x += 10;
 
-    if(x === 60) {
+    if(x === 60 || x === 90) {
+        console.log('CONTINUE')
         continue;
     }
 
