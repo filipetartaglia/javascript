@@ -61,3 +61,13 @@ const craques = jogadores.slice(2, 6);
 const jogOrdem = jogadores.sort();
 
 document.getElementById("teste").innerHTML = jogOrdem;
+
+const numeros = [40, 100, 1, 5, 25, 10];
+
+numeros.sort(function (a, b) { return b - a});
+
+document.getElementById("teste").innerHTML = numeros;
+
+function maiorNumero(array) {
+    return Math.max.apply(null, array);
+}
