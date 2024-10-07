@@ -43,4 +43,3 @@ console.log(segundos);
 //PEGA DATA NO PADRÃO BRASILEIRO
 let dataBR = data.toLocaleString('pt-br');
 console.log(dataBR);
-
