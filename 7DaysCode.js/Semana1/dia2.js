@@ -1,8 +1,5 @@
 const readline = require('readline');
 
-//let nomePessoa = ('Qual o seu nome?');
-//let idadePessoa =('Qual sua idade?');
-
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
