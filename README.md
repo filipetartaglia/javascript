@@ -1,2 +1,2 @@
 # javascript
- Curso de JavaScript
+ Estudos de JavaScript
