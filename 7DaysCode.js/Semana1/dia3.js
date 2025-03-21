@@ -5,61 +5,107 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
+// Pergunta inicial
 rl.question('Escolha uma área para seguir na programação: Frontend ou Backend? ' ,(qualAreaProgramacao) => {
-    
+
+    // Escolhas do usuario
     const areaEscolhida = qualAreaProgramacao.trim().toLowerCase();
 
+    // Caso escolha frontend
     switch (areaEscolhida) {
         case 'frontend':
 
+            // Pergunta 2
             rl.question('Frontend, ótima escolha! Agora escolha: React ou Vue? ', (linguagemFront) => {
 
                 const formalizaLinguagemFront = linguagemFront.trim().toLowerCase();
 
+                // Escolher caminho do framework
+                // Se for React
                 if (formalizaLinguagemFront == 'react') {
 
                     rl.question('React, está em alta no mercado! Agora escolha: você quer se especializar na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? opção(1) ou opção(2) ', (escolhaOpcao1) => {
 
-                        if (escolhaOpcao1 == '1'){
+                        if (escolhaOpcao1 == '1' || escolhaOpcao1 == '2'){
 
                             rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec1) => {
                                 console.log('top');
                             });
-                        } else if (escolhaOpcao1 == '2') {
-                            rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec1) => {
-                                console.log('top2');
-                            });
-                        }
+
+                        } else {
+                            console.log('Ops! Algum erro, vamos tentar novamente');
+                            process.exit();
+                        };
                     });
-                } else {
+
+                // Se for Vue
+                } else if (formalizaLinguagemFront == 'vue') {
 
                     rl.question('Vue, ótimo está crescendo bastante! Agora escolha: você quer se especializar na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? opção(1) ou opção(2) ', (escolhaOpcao2) => {
 
-                        if (escolhaOpcao2 == '1') {
+                        if (escolhaOpcao2 == '1' || escolhaOpcao2 == '2') {
+
                             rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec2) => {
                                 console.log('show');
                             });
-                        }
+                        } else {
+                            console.log('Ops! Algum erro, vamos tentar novamente');
+                            process.exit();
+                        } 
+
                     });
+
+                // Senão é igual a erro
+                } else {
+                    console.log('Ops! Algum erro, vamos tentar novamente');
+                    process.exit();
                 }
 
                 
             });
             break;
-        
+            
+
+        // Caso escolha Backend
         case 'backend': 
 
             rl.question('Backend, ótima escolha! Agora escolha: C# ou Java? ', (linguagemBack) => {
+                
+                const formalizaLinguagemBack = linguagemBack.trim().toLowerCase();
 
-                rl.question('Boa! Você quer se especializar na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? (opcao1) ou (opcao2) ', (escolhaOpcao2) => {
+                // Se for C#
+                if (formalizaLinguagemBack == 'c#') {
 
-                    rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec2) => {
+                    rl.question('C#, está em alta no mercado! Agora escolha: você quer se especializar na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? opção(1) ou opção(2) ', (escolhaOpcao1_2) => {
+                        
+                        if (escolhaOpcao1_2 == '1' || escolhaOpcao1_2 == '2'){
+
+                            rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec1_1) => {
+                                console.log('otimo');
+                            })
+                        
+                        } else {
+                            console.log('Ops! Algum erro, vamos tentar novamente');
+                            process.exit()
+                        }
 
                     });
 
-                });
+                // Se for Java
+                } else if (formalizaLinguagemBack == 'java') {
+
+                    rl.question('Vue, ótimo está crescendo bastante! Agora escolha: você quer se especializar na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? opção(1) ou opção(2)', (escolhaOpcao2_2) => {
+                        console.log('certo');
+                    })
+
+                // Senão é igual a erro
+                } else {
+                    console.log('Ops! algum erro, vamos tentar novamente')
+                }
+
             });
             break;
+
 
         default:
             console.log('Ops! Algum erro, vamos tentar novamente');
