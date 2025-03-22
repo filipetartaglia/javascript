@@ -28,10 +28,8 @@ rl.question('Escolha uma área para seguir na programação: Frontend ou Backend
 
                         if (escolhaOpcao1 == '1' || escolhaOpcao1 == '2'){
 
-                            rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec1) => {
-                                console.log('top');
-                            });
-
+                            perguntarTec();
+                            
                         } else {
                             console.log('Ops! Algum erro, vamos tentar novamente');
                             process.exit();
@@ -45,9 +43,7 @@ rl.question('Escolha uma área para seguir na programação: Frontend ou Backend
 
                         if (escolhaOpcao2 == '1' || escolhaOpcao2 == '2') {
 
-                            rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec2) => {
-                                console.log('show');
-                            });
+                            perguntarTec();
                         } else {
                             console.log('Ops! Algum erro, vamos tentar novamente');
                             process.exit();
@@ -80,9 +76,7 @@ rl.question('Escolha uma área para seguir na programação: Frontend ou Backend
                         
                         if (escolhaOpcao1_2 == '1' || escolhaOpcao1_2 == '2'){
 
-                            rl.question('E por fim, quais são as tecnologias nas quais você gostaria de se especializar? ', (quaisTec1_1) => {
-                                console.log('otimo');
-                            })
+                            perguntarTec();
                         
                         } else {
                             console.log('Ops! Algum erro, vamos tentar novamente');
@@ -94,8 +88,17 @@ rl.question('Escolha uma área para seguir na programação: Frontend ou Backend
                 // Se for Java
                 } else if (formalizaLinguagemBack == 'java') {
 
-                    rl.question('Vue, ótimo está crescendo bastante! Agora escolha: você quer se especializar na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? opção(1) ou opção(2)', (escolhaOpcao2_2) => {
-                        console.log('certo');
+                    rl.question('Java, ótima linguagem, tem bastante mercado! Agora escolha: você quer se especializar na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? opção(1) ou opção(2) ', (escolhaOpcao2_2) => {
+                        
+                        if (escolhaOpcao2_2 == '1' || escolhaOpcao2_2 == '2'){
+
+                            perguntarTec();
+                        
+                        } else {
+                            console.log('Ops! Algum erro, vamos tentar novamente');
+                            process.exit()
+                        };
+
                     })
 
                 // Senão é igual a erro
@@ -114,3 +117,7 @@ rl.question('Escolha uma área para seguir na programação: Frontend ou Backend
             
     };
 });
+
+function perguntarTec() {
+    console.log('Funciona');
+}
